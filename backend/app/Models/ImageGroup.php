@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class ImageGroup extends Model
 {
     use HasFactory;
+    protected  $guarded = [];
     public function images(): HasMany
     {
         return $this->hasMany(Image::class);

@@ -24,3 +24,5 @@ Route::get('fetch-sub-sub-category/{id}',[\App\Http\Controllers\CategoryControll
 Route::get('fetch-color',[\App\Http\Controllers\VariantController::class,'fetchColor']);
 Route::get('fetch-size',[\App\Http\Controllers\VariantController::class,'fetchSize']);
 Route::post('add-product',[\App\Http\Controllers\ProductController::class,'store']);
+Route::get('products',[\App\Http\Controllers\ProductController::class,'productList']);
+Route::get('product/{id}',[\App\Http\Controllers\ProductController::class,'show']);

@@ -11,7 +11,7 @@ class Stock extends Model
 {
     use HasFactory;
     protected $table = 'stock';
-
+    protected  $guarded = [];
     public function color(): BelongsTo
     {
         return $this->belongsTo(Color::class);
@@ -24,6 +24,10 @@ class Stock extends Model
     public function imageGroup(): BelongsTo
     {
         return $this->belongsTo(ImageGroup::class);
+    }
+    public function product(): BelongsTo
+    {
+        return $this->belongsTo(Product::class);
     }
 
 }

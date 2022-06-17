@@ -12,6 +12,7 @@ class Image extends Model
 
     protected $guarded = [];
 
+
     public function color(): BelongsTo
     {
         return $this->belongsTo(Color::class);
@@ -26,5 +27,8 @@ class Image extends Model
     public function imageGroup(): BelongsTo
     {
         return $this->belongsTo(ImageGroup::class);
+    }
+    public function imagePath () {
+        return url('/storage/product/images/'.$this->name);
     }
 }
